@@ -1,0 +1,57 @@
+.label-checkbox-input {
+  position: absolute;
+  bottom: -2px;
+  left: 6px;
+}
+
+.input-checkbox-img {
+  display: none;
+}
+
+.input-checkbox-img:checked ~ .img-zoom-in {
+  display: flex;
+}
+
+.input-checkbox-img:checked ~ .close-image {
+  display: flex;
+}
+
+.close-image {
+  z-index: 1;
+  position: absolute;
+  cursor: pointer;
+  display: none;
+  left: -90px;
+  top: -138px;
+}
+
+.icon-fullscreen {
+  cursor: pointer;
+  color: #eee;
+  padding: 2px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 100%;
+  -webkit-border-radius: 100%;
+  -moz-border-radius: 100%;
+  -ms-border-radius: 100%;
+  -o-border-radius: 100%;
+}
+
+.img-zoom-in {
+  background: rgba(238, 238, 238, 1);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  left: -6rem;
+  top: -9rem;
+  display: none;
+  padding: 20px;
+}
+
+.input-darkmode:checked ~ .main-container .close-image {
+  color: #fff;
+}
+
+.input-darkmode:checked ~ .main-container .img-zoom-in {
+  background-color: rgba(0, 0, 0, 0.3);
+}
