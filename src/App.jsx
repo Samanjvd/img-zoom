@@ -3,10 +3,11 @@ import ImgZoom from "./components/img-zoom";
 
 function App() {
   const [imgUrl, setImgUrl] = useState("");
-  // const [inputId, setInputId] = useState('')
+  const [isopen, setIsOpen] = useState(false);
 
   const handleClick = (e) => {
     setImgUrl(e.target.src);
+    setIsOpen(true);
   };
 
   return (
@@ -14,7 +15,7 @@ function App() {
       <label htmlFor="checkbox-img" className="">
         <img src="src\assets\images\prj.png" alt="" onClick={handleClick} />
       </label>
-      <ImgZoom imageUrl={imgUrl} />
+      <ImgZoom imageUrl={imgUrl} isOpen={isopen} setIsOpen={setIsOpen} />
     </div>
   );
 }
